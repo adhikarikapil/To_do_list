@@ -70,6 +70,7 @@ p {
   display: flex;
   flex-direction: column;
   gap: 14px;
+  margin: 14px;
 }
 
 .todoItem {
@@ -83,6 +84,11 @@ p {
 
 .todoItem p {
   flex: 1;
+}
+
+.delete, .edit {
+  margin: 5px;
+  cursor: pointer;
 }
 
 .actionsContainer {

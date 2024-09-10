@@ -1,9 +1,25 @@
-import React from 'react'
+import React from "react";
+import TodoCard from "./TodoCard";
 
-export default function TodoList() {
+export default function TodoList({
+  todos,
+  handleDeleteTodo,
+  todoValue,
+  setTodoValue,
+}) {
   return (
-    <div>
-        TodoList
-    </div>
-  )
+    <ul className="main">
+      {todos.map((todo, todoIndex) => {
+        return (
+          <TodoCard
+            handleDeleteTodo={handleDeleteTodo}
+            key={todoIndex}
+            index={todoIndex}
+          >
+            <p>{todo}</p>
+          </TodoCard>
+        );
+      })}
+    </ul>
+  );
 }
